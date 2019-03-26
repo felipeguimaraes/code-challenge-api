@@ -53,8 +53,6 @@ public class PdvResource {
 
 	@PostMapping("/pdvs")
 	public void createPDV(@Valid @RequestBody Pdv pdv) {
-//		pdv.setDocument(pdv.getDocument().replaceAll("/", ""));
-
 		Pdv savedPDV = pdvRepository.save(pdv);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPDV.getId())
@@ -66,7 +64,6 @@ public class PdvResource {
 	@PostMapping("/pdvs/bulk")
 	public void createPDVs(@Valid @RequestBody List<Pdv> pdvs) {
 		for (Pdv pdv : pdvs) {
-//			pdv.setDocument(pdv.getDocument().replaceAll("/", ""));
 			pdvRepository.save(pdv);
 		}
 
