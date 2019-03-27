@@ -30,18 +30,16 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 2. MongoDB  
   Link com instruções de instalação [Download](https://docs.mongodb.com/manual/installation/)  
   Após a instalação, abrir o console (de acordo com cada Sistema Operacional) e executar o startup do MongoDB:  
-```linux
+Linux / MacOS:
+```
 mongod
 ```
-```cmd
-mongod
+
+Windows:
 ```
-```command
-mongod
+C:\<DIRETORIO_INSTALACAO_MONGO>\bin>mondod
 ```
-```console
-mongod
-```
+
 ## Documentaçãoo
 sadfsdf
 
