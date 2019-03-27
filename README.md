@@ -4,8 +4,8 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
 
 ## Índice
 
-* [Pré-requisitos](#pré-requisitos)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
+* [Pré-requisitos](#pré-requisitos)
 * [Documentação](#documentação)
   - [Serviços (API)](#serviços)
   - [Deploy Local](#deploy-local)
@@ -15,7 +15,7 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
 ## Tecnologias utilizadas
 1. Java 8
 2. Spring Boot 
-3. Swagger [veja mais...](https://swagger.io/)
+3. Swagger (documentação e test de APIs) [veja mais...](https://swagger.io/)
 4. Maven
 5. MongoDB (tecnologia escolhida como Banco de Dados)
 
@@ -26,16 +26,22 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 
 1. Java 8  
   Link com instruções de instalação [Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).  
-  
+
 2. MongoDB  
   Link com instruções de instalação [Download](https://docs.mongodb.com/manual/installation/)  
   Após a instalação, abrir o console (de acordo com cada Sistema Operacional) e executar o startup do MongoDB:  
-```
+```linux
 mongod
 ```
-
-
-
+```cmd
+mongod
+```
+```command
+mongod
+```
+```console
+mongod
+```
 ## Documentaçãoo
 sadfsdf
 
