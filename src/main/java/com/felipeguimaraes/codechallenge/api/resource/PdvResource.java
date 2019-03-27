@@ -61,7 +61,7 @@ public class PdvResource {
 		ResponseEntity.created(location).build();
 	}
 
-	@PostMapping("/pdvs/bulk")
+//	@PostMapping("/pdvs/bulk")
 	public void createPDVs(@Valid @RequestBody List<Pdv> pdvs) {
 		for (Pdv pdv : pdvs) {
 			pdvRepository.save(pdv);

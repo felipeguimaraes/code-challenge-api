@@ -43,12 +43,13 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 
 3. Git  
   Link com instruções de instalação [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).  
-
+	
+	Clone do projeto:  
 	```
 	git clone https://github.com/felipeguimaraes/code-challenge-api.git
 	```
 	  
-  *Observação:* uma alternativa para não utilizar o Git é realizar o download do projeto ZIP e descompactar para utilização nas próximas etapas [Download ZIP](https://github.com/felipeguimaraes/code-challenge-api/archive/master.zip)
+	  **Observação:** uma alternativa para não utilizar o Git é realizar o download do projeto ZIP e descompactar para utilização nas próximas etapas [Download ZIP](https://github.com/felipeguimaraes/code-challenge-api/archive/master.zip)
 
 
 
@@ -56,15 +57,32 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 
 ### - Serviços
 
-A documentação dos serviços (API) está disponível junto com o projeto via Swagger (https://swagger.io/).  
+A documentação dos serviços (API) está disponível junto com o projeto via Swagger.  
 
-Esta ferramenta permite que além de documentar, pode ser feito também testes diretamente via browser de forma simples e intuitiva.  
+Esta ferramenta permite que além de documentar, pode ser realizado também testes diretamente via browser de forma simples e intuitiva.  
 
 Como acessar:  
 
 Local -> [http://localhost:8080/swagger-ui.html#/pdv-resource](http://localhost:8080/swagger-ui.html#/pdv-resource)  
 
-Produção -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource
+Produção -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource  
+
+
+Tela inicial do Swagger com os serviços do PDV:  
+
+![Serviços do PDV](files/images/swagger.png)  
+
+
+
+Exemplo - Request - Serviço de pesquisa por Longitude e Latitude:  
+
+![Serviços do PDV](files/images/pdv-search-request.png)  
+
+
+Exemplo - Response - Serviço de pesquisa por Longitude e Latitude:  
+
+![Serviços do PDV](files/images/pdv-search-response.png)  
+
 
 
 ### - Deploy locall
