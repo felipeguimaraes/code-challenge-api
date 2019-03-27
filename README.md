@@ -55,6 +55,7 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 
 ## Documentação
 
+
 ### - Serviços
 
 A documentação dos serviços (API) está disponível junto com o projeto via Swagger.  
@@ -88,21 +89,42 @@ Exemplo - Response - Serviço de pesquisa por Longitude e Latitude:
 ### - Deploy locall
 O *deploy local* utilizará por padrão o MongoDB que foi instalado também localmente [Pré-requisitos](#pré-requisitos). O profile *dev* será utilizado como padrão.
 
-No entanto, é possível alterar a URL do MongoDB apontando para alguma instalação não local (ambiente de dev, qa, cloud, etc). Basta alterar o arquivo `src/main/resources/env/config.dev.properties` no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo: `spring.data.mongodb.uri=mongodb://127.0.0.1:27017/test?retryWrites=true`  
+No entanto, se desejar, é possível alterar a URL do MongoDB apontando para alguma instalação não local (ambiente de dev, qa, cloud, etc). Basta alterar o arquivo `src/main/resources/env/config.dev.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo: `spring.data.mongodb.uri=mongodb://127.0.0.1:27017/test?retryWrites=true`  
 
-Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto), no diretório do projeto, realizar o seguinte comando para compilar:
+Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar:
 
-	Linux / MacOS:
-	```
-	./mvnw clean package
-	```
-	
-	Windows:
-	```
-	mvnw.cmd clean package
-	```
+Linux / MacOS:
+```
+./mvnw clean package
+```
+
+Windows:
+```
+mvnw.cmd clean package
+```
+
+Resultado esperado:
+```javascript
+[INFO] ---------------------
+[INFO] BUILD SUCCESS
+[INFO] ---------------------
+```
+
+Após compilação do projeto, ainda dentro do diretório do projeto, executar o comando abaixo para startup da aplicação:
 
 
+Linux / MacOS:
+```
+java -jar target/api.jar
+```
+
+Windows:
+```
+java -jar target\api.jar
+```
+
+Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, CURL, ou via [Swagger](http://localhost:8080/swagger-ui.html#/pdv-resource).
 
 ### - Deploy produção
 asdfasdf
+
