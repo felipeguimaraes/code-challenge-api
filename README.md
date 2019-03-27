@@ -110,7 +110,7 @@ Resultado esperado:
 [INFO] ---------------------
 ```
 
-Após compilação do projeto, ainda dentro do diretório do projeto, executar o comando abaixo para startup da aplicação:
+Após a compilação, ainda dentro do diretório do projeto, executar o comando abaixo para startup da aplicação:
 
 
 Linux / MacOS:
@@ -123,8 +123,46 @@ Windows:
 java -jar target\api.jar
 ```
 
-Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, CURL, ou via [Swagger](http://localhost:8080/swagger-ui.html#/pdv-resource).
+Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, Curl, ou via [Swagger](http://localhost:8080/swagger-ui.html#/pdv-resource).
 
 ### - Deploy produção
-asdfasdf
+
+Para o *deploy produção*, recomendamos utilizar o profile *prod*. Assim é possível especificar uma URL diferente do MongoDB. Basta alterar o arquivo `src/main/resources/env/config.prod.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo de um MondoGB (SAAS): `spring.data.mongodb.uri=mongodb+srv://code-challenge:code@cluster0-mxtth.mongodb.net/test?retryWrites=true`  
+
+Os procedimentos abaixo (compilação e deploy do pacote) podem ser tanto executados diretamente no servidor de produção, ou apenas compilar localmente e o deploy em produção.   
+*Em um ambiente de trabalho real, o ideal é que todos esses procedimentos estejam automatizados utilizando conceitos como CI/CD (integração e entrega contínua).*
+
+Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar (com o profile *prod*):
+
+Linux / MacOS:
+```
+./mvnw clean package -Pprod
+```
+
+Windows:
+```
+mvnw.cmd clean package -Pprod
+```
+
+Resultado esperado:
+```javascript
+[INFO] ---------------------
+[INFO] BUILD SUCCESS
+[INFO] ---------------------
+```
+
+Após a compilação, executar o comando abaixo para startup da aplicação:
+
+
+Linux / MacOS:
+```
+java -jar target/api.jar
+```
+
+Windows:
+```
+java -jar target\api.jar
+```
+
+Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, Curl, ou via Swagger -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource  
 
