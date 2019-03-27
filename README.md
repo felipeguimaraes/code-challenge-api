@@ -18,7 +18,7 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
 3. Swagger (documentação e teste de APIs [veja mais...](https://swagger.io/))
 4. Maven
 5. MongoDB (tecnologia escolhida como Banco de Dados)
-
+6. Git (apenas para download do projeto)
 
 ## Pré-requisitos
 
@@ -41,16 +41,28 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 	C:\<DIRETORIO_INSTALACAO_MONGO>\bin>mondod
 	```
 
-## Documentaçãoo
+3. Git  
+  Link com instruções de instalação [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).  
 
-### - Serviçoss
-A documentação dos serviços (API) está disponível junto com o projeto via Swagger ([veja mais])(https://swagger.io/)).  
+	```
+	git clone https://github.com/felipeguimaraes/code-challenge-api.git
+	```
+	  
+  *Observação:* uma alternativa para não utilizar o Git é realizar o download do projeto ZIP e descompactar para utilização nas próximas etapas [Download ZIP](https://github.com/felipeguimaraes/code-challenge-api/archive/master.zip)
+
+
+
+## Documentação
+
+### - Serviços
+
+A documentação dos serviços (API) está disponível junto com o projeto via Swagger (https://swagger.io/).  
 
 Esta ferramenta permite que além de documentar, pode ser feito também testes diretamente via browser de forma simples e intuitiva.  
 
 Como acessar:  
 
-[Local -> http://localhost:8080/swagger-ui.html#/pdv-resource](http://localhost:8080/swagger-ui.html#/pdv-resource)  
+Local -> [http://localhost:8080/swagger-ui.html#/pdv-resource](http://localhost:8080/swagger-ui.html#/pdv-resource)  
 
 Produção -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource
 
