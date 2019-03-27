@@ -5,10 +5,10 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
 
 ## Índice
 
-* [Pré-requisitos](#pre-requisitos)
+* [Pré-requisitos](#pré-requisitos)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
-* [Documentação](#documentacao)
-  - [Serviços (API)](#servicos)
+* [Documentação](#documentação)
+  - [Serviços (API)](#serviços)
   - [Deploy Local](#deploy-local)
   - [Deploy Producao](#deploy-producao)
 
