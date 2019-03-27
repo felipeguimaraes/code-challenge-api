@@ -86,7 +86,22 @@ Exemplo - Response - Serviço de pesquisa por Longitude e Latitude:
 
 
 ### - Deploy locall
-asdfasdf
+O *deploy local* utilizará por padrão o MongoDB que foi instalado também localmente [Pré-requisitos](#pré-requisitos). O profile *dev* será utilizado como padrão.
+
+No entanto, é possível alterar a URL do MongoDB apontando para alguma instalação não local (ambiente de dev, qa, cloud, etc). Basta alterar o arquivo `src/main/resources/env/config.dev.properties` no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo: `spring.data.mongodb.uri=mongodb://127.0.0.1:27017/test?retryWrites=true`  
+
+Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto), no diretório do projeto, realizar o seguinte comando para compilar:
+
+	Linux / MacOS:
+	```
+	./mvnw clean package
+	```
+	
+	Windows:
+	```
+	mvnw.cmd clean package
+	```
+
 
 
 ### - Deploy produção
