@@ -56,7 +56,7 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 ## Documentação
 
 
-### - Serviços
+### Serviços
 
 A documentação dos serviços (API) está disponível junto com o projeto via Swagger.  
 
@@ -66,7 +66,7 @@ Como acessar:
 
 Local -> [http://localhost:8080/swagger-ui.html#/pdv-resource](http://localhost:8080/swagger-ui.html#/pdv-resource)  
 
-Produção -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource  
+Produção -> http://<IP>:8080/swagger-ui.html#/pdv-resource  
 
 
 Tela inicial do Swagger com os serviços do PDV:  
@@ -86,12 +86,12 @@ Exemplo - Response - Serviço de pesquisa por Longitude e Latitude:
 
 
 
-### - Deploy local
+### Deploy local
 O *deploy local* utilizará por padrão o MongoDB que foi instalado também localmente [Pré-requisitos](#pré-requisitos). O profile *dev* será utilizado como padrão.
 
 No entanto, se desejar, é possível alterar a URL do MongoDB apontando para alguma instalação não local (ambiente de dev, qa, cloud, etc). Basta alterar o arquivo `src/main/resources/env/config.dev.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo: `spring.data.mongodb.uri=mongodb://127.0.0.1:27017/test?retryWrites=true`  
 
-Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar:
+Após procedimento de clone do Git (ou procedimento via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar:
 
 Linux / MacOS:
 ```
@@ -125,14 +125,14 @@ java -jar target\api.jar
 
 Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, Curl, ou via [Swagger](http://localhost:8080/swagger-ui.html#/pdv-resource).
 
-### - Deploy produção
+### Deploy produção
 
-Para o *deploy produção*, recomendamos utilizar o profile *prod*. Assim é possível especificar uma URL diferente do MongoDB. Basta alterar o arquivo `src/main/resources/env/config.prod.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo de um MondoGB (SAAS): `spring.data.mongodb.uri=mongodb+srv://code-challenge:code@cluster0-mxtth.mongodb.net/test?retryWrites=true`  
+Para o *deploy produção*, recomendamos utilizar o profile *prod*. Assim é possível especificar uma URL diferente do MongoDB. Basta alterar o arquivo `src/main/resources/env/config.prod.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo de um MondoGB (SaaS): `spring.data.mongodb.uri=mongodb+srv://code-challenge:code@cluster0-mxtth.mongodb.net/test?retryWrites=true`  
 
 Os procedimentos abaixo (compilação e deploy do pacote) podem ser tanto executados diretamente no servidor de produção, ou apenas compilar localmente e o deploy em produção.   
 *Em um ambiente de trabalho real, o ideal é que todos esses procedimentos estejam automatizados utilizando conceitos como CI/CD (integração e entrega contínua).*
 
-Após procedimento do Git (seja via clone do projeto ou via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar (com o profile *prod*):
+Após procedimento de clone do Git (ou procedimento via download+descompactação do projeto [Pré-requisitos](#pré-requisitos)), no diretório do projeto, realizar o seguinte comando para compilar (com o profile *prod*):
 
 Linux / MacOS:
 ```
