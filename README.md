@@ -1,6 +1,5 @@
 # Code Challenge Back-end (API)
-Este projeto tem como objetivo principal a disponibilização de serviços para PDV (Ponde de Venda) como cadastro e buscas.
-
+Este projeto tem como objetivo principal a disponibilização de serviços para PDV (Ponto de Venda). [ZX-Ventures Challenge](https://github.com/ZXVentures/code-challenge)
 
 
 ## Índice
@@ -13,67 +12,55 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
   - [Deploy Producao](#deploy-producao)
 
 
-## Pré-requisitos
-sadlfjsldkajfsçldkj
-
-
 ## Tecnologias utilizadas
-asldfkjasldkfj
+1. Java 8
+2. Spring Boot 
+3. Swagger [veja mais...](https://swagger.io/)
+4. Maven
+5. MongoDB (tecnologia escolhida como Banco de Dados)
 
 
-## Documentação
+## Pré-requisitos
+
+As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticamente em qualquer ambiente (Windows, Linux, MacOS, etc).  
+
+1. Java 8  
+  Link com instruções de instalação [Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).  
+  
+2. MongoDB  
+  Link com instruções de instalação [Download](https://docs.mongodb.com/manual/installation/)  
+  Após a instalação, abrir o console (de acordo com cada Sistema Operacional) e executar o startup do MongoDB:  
+```
+mongod
+```
+
+
+
+## Documentaçãoo
 sadfsdf
 
 
-### Serviços
+### - Serviços
 asdfasdf
 
 
-### Deploy local
+### - Deploy local
 asdfasdf
 
 
-### Deploy produção
+### - Deploy produção
 asdfasdf
 
-
-
-There are two kind of profiles:
-
-1. [Maven Profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html): A build-time approach.
-```
-clean install -Pdev
-```
-
-2. [Spring Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html): A runtime approach.
-```
-java -jar -Dspring.profiles.active=dev xxx.jar
-```
-
-The answer depends on your requirements. A good rule of thumb:
-
-_**If you need different artifacts then go with Maven profiles. If it is just a real configuration that can be set AFTER the artifact is built then go with Spring profiles.**_
-
-Basically, Maven profiles would provide a build-time solution, while Spring profiles would provide a runtime alternative.
-
-## Technologies
-
-1. Spring Boot 2.x (spring-boot-starter-web, spring-boot-starter-tomcat)
-2. Java 8
-3. Tomcat 8.5
-4. Maven
-
-## Exposed methods to test that it works
 
 **1. HTTP Method: GET**
 ```
 http://localhost:8080/mvnspringboot/params/all
 ```
 
-## Other Alternatives (Examples)
 
-* [Activate Spring property files with Maven profiles](http://dolszewski.com/spring/spring-boot-properties-per-maven-profile/): It replaces the placeholder for the _spring.profiles.active_ variable with the active Maven profile at build time so the Spring framework, after starting your app, can load the appropriate configuration file based on the name of the active Spring profile.
-* [Maven copy-rename-maven-plugin plugin](https://coderplus.github.io/copy-rename-maven-plugin/usage.html): The idea is to copy the complete specific profile file (dev.properties) to create the application properties inside the project output directory (application.properties). For this you need the help of Maven resources and Maven filtering. The best usage of this rename plugin is when you need a .json file or .txt file per environment.
+_**If you need different artifacts then go with Maven profiles. If it is just a real configuration that can be set AFTER the artifact is built then go with Spring profiles.**_
+
+
 
 ## Useful Documentation
 
@@ -83,15 +70,6 @@ http://localhost:8080/mvnspringboot/params/all
 * [Spring Boot traditional deployment](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html)
 * [Spring Boot 2 - Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Release-Notes)
 
-## Additional Useful Links
-
-* [How to install Tomcat 8.x in AWS](https://github.com/carlosCharz/installtomcataws)
-* [How to install Jenkins 2.x in AWS](https://github.com/carlosCharz/installjenkinsaws)
-* [Configure Jenkins 2.x with Tomcat 8.x in AWS](https://github.com/carlosCharz/configurejenkinstomcat)
-
-## Troubleshooting
-
-* All the build phase is done correctly from Eclipse or CLI (Command Line Interface) for the 'dev' profile with the command 'clean install -Pdev'. The war file is created with the variables from the desired profile. If you deploy the war in a Tomcat container manually or using Jenkins it is going to work properly. _The problem might arise when you deploy using Eclipse. There are some issues with the m2e plugin where even when you build with the -Pdev it takes the activeByDefault profile. It seems that Eclipse is ignoring the profile provided. In that case, right click to the project -> Properties -> Maven and set the active Maven profile._
 
 ## About me
 I am Carlos Becerra - MSc. Softwware & Systems.  But to tell you the truth, I'd prefer to be a passionate developer. You can contact me via:
@@ -101,18 +79,3 @@ I am Carlos Becerra - MSc. Softwware & Systems.  But to tell you the truth, I'd 
 
 _**Any improvement or comment about the project is always welcome! As well as others shared their code publicly I want to share mine! Thanks!**_
 
-## License
-```javas
-Copyright 2018 Carlos Becerra
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
