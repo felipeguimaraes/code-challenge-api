@@ -9,7 +9,7 @@ Este projeto tem como objetivo principal a disponibilização de serviços para 
 * [Documentação](#documentação)
   - [Serviços (API)](#serviços)
   - [Deploy Local](#deploy-local)
-  - [Deploy Producao](#deploy-producao)
+  - [Deploy Producao](#deploy-produção)
 
 
 ## Tecnologias utilizadas
@@ -86,7 +86,7 @@ Exemplo - Response - Serviço de pesquisa por Longitude e Latitude:
 
 
 
-### - Deploy locall
+### - Deploy local
 O *deploy local* utilizará por padrão o MongoDB que foi instalado também localmente [Pré-requisitos](#pré-requisitos). O profile *dev* será utilizado como padrão.
 
 No entanto, se desejar, é possível alterar a URL do MongoDB apontando para alguma instalação não local (ambiente de dev, qa, cloud, etc). Basta alterar o arquivo `src/main/resources/env/config.dev.properties` e no atributo `spring.data.mongodb.uri` especificar a URL. Exemplo: `spring.data.mongodb.uri=mongodb://127.0.0.1:27017/test?retryWrites=true`  
@@ -158,10 +158,18 @@ Linux / MacOS:
 ```
 java -jar target/api.jar
 ```
+ou
+```
+java -jar api.jar
+```
 
 Windows:
 ```
 java -jar target\api.jar
+```
+ou
+```
+java -jar api.jar
 ```
 
 Pronto! Serviços do PDV no ar! Podem ser acessados via client de qualquer linguagem de programação, Curl, ou via Swagger -> http://<IP_OU_DOMINIO>:8080/swagger-ui.html#/pdv-resource  

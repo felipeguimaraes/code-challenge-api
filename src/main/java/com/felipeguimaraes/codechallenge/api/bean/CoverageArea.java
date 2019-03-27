@@ -9,10 +9,6 @@ public class CoverageArea {
 
 	private List<List<List<List<Double>>>> coordinates = new ArrayList<>();
 
-	protected CoverageArea() {
-
-	}
-
 	public String getType() {
 		return type;
 	}

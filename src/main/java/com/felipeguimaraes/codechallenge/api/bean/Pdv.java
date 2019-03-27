@@ -5,9 +5,10 @@ import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.index.CompoundIndexes;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@CompoundIndexes({ @CompoundIndex(def = "{'coverageArea' : '2dsphere'}", background = true, useGeneratedName = true),
-		@CompoundIndex(def = "{'address' : '2dsphere'}", background = true, useGeneratedName = true),
-		@CompoundIndex(def = "{'document' : 1}", background = true, unique = true, useGeneratedName = true) })
+@CompoundIndexes({
+		@CompoundIndex(def = "{'coverageArea' : '2dsphere'}", background = true, name = "coverageArea_2dsphere"),
+		@CompoundIndex(def = "{'address' : '2dsphere'}", background = true, name = "address_2dsphere"),
+		@CompoundIndex(def = "{'document' : 1}", background = true, unique = true, name = "document_cnpj") })
 @Document
 public class Pdv {
 

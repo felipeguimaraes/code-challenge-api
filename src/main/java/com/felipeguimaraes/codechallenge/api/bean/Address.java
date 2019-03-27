@@ -9,10 +9,6 @@ public class Address {
 
 	private List<Double> coordinates = new ArrayList<Double>();
 
-	protected Address() {
-
-	}
-
 	public String getType() {
 		return type;
 	}

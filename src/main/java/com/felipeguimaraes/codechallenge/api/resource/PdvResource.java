@@ -1,7 +1,6 @@
 package com.felipeguimaraes.codechallenge.api.resource;
 
 import java.net.URI;
-import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -52,24 +51,13 @@ public class PdvResource {
 	}
 
 	@PostMapping("/pdvs")
-	public void createPDV(@Valid @RequestBody Pdv pdv) {
+	public ResponseEntity<?> createPDV(@Valid @RequestBody Pdv pdv) {
 		Pdv savedPDV = pdvRepository.save(pdv);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPDV.getId())
 				.toUri();
 
-		ResponseEntity.created(location).build();
-	}
-
-//	@PostMapping("/pdvs/bulk")
-	public void createPDVs(@Valid @RequestBody List<Pdv> pdvs) {
-		for (Pdv pdv : pdvs) {
-			pdvRepository.save(pdv);
-		}
-
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().build().toUri();
-
-		ResponseEntity.created(location).build();
+		return ResponseEntity.created(location).build();
 	}
 
 }
