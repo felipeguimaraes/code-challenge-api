@@ -1,8 +1,42 @@
-# Maven profiles per environment with Spring Boot 2.x
+# Code Challenge Back-end (API)
+Este projeto tem como objetivo principal a disponibilização de serviços para PDV (Ponde de Venda) como cadastro e buscas.
 
-This is a spring boot rest project that handle the application properties per environment using Maven profiles.
 
-## Which Profile?
+
+## Índice
+
+* [Pré-requisitos](#pre-requisitos)
+* [Tecnologias Utilizadas](#tecnologias-utilizadas)
+* [Documentação](#documentacao)
+  - [Serviços (API)](#servicos)
+  - [Deploy Local](#deploy-local)
+  - [Deploy Producao](#deploy-producao)
+
+
+## Pré-requisitos
+sadlfjsldkajfsçldkj
+
+
+## Tecnologias utilizadas
+asldfkjasldkfj
+
+
+## Documentação
+sadfsdf
+
+
+### Serviços
+asdfasdf
+
+
+### Deploy local
+asdfasdf
+
+
+### Deploy produção
+asdfasdf
+
+
 
 There are two kind of profiles:
 
