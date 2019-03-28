@@ -46,8 +46,9 @@ As tecnologias utilizadas abaixo são cross-platform, ou seja, rodam praticament
 	...NETWORK  [initandlisten] waiting for connections on port 27017
 	```
 
-
-*O MongoDB deve estar rodando para executar o deploy da aplicação, pois ele é pré-requisito para execução dos testes da API.*
+	*O MongoDB deve estar rodando para executar o deploy da aplicação, pois ele é pré-requisito para execução dos testes da API.*  
+	
+	
 
 3. Git  
   Link com instruções de instalação [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).  
